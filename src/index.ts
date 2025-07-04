@@ -28,7 +28,7 @@ interface ArticlesResponse {
   count: number;
 }
 
-function formatArticle(article: Article): string {
+export function formatArticle(article: Article): string {
   return [
     `Title: ${article.title || "Unknown"}`,
     `Published: ${
@@ -43,7 +43,7 @@ function formatArticle(article: Article): string {
   ].join("\n");
 }
 
-async function makeSpaceFlightNewsRequest<T>(url: string): Promise<T | null> {
+export async function makeSpaceFlightNewsRequest<T>(url: string): Promise<T | null> {
   const headers = {
     Accept: "application/json",
   };
@@ -68,7 +68,7 @@ async function makeSpaceFlightNewsRequest<T>(url: string): Promise<T | null> {
 }
 
 // 共通のロジックとして切り出し
-async function fetchAndFormatArticles(
+export async function fetchAndFormatArticles(
   url: string,
   fallbackMessage: string
 ): Promise<string> {
