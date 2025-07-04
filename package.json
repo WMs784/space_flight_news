@@ -8,7 +8,9 @@
   },
   "scripts": {
     "build": "tsc && chmod 755 build/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage"
   },
   "files": [
     "build"
@@ -23,10 +25,14 @@
     "zod": "^3.24.2"
   },
   "devDependencies": {
+    "@types/jest": "^30.0.0",
     "@types/lodash": "^4.17.16",
     "@types/node": "^22.14.1",
     "@types/scheduler": "^0.26.0",
     "@types/testing-library__jest-dom": "^6.0.0",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }

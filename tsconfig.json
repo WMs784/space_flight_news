@@ -9,7 +9,9 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["node", "@testing-library/jest-dom"]
+    "types": ["node", "@testing-library/jest-dom"],
+    "isolatedModules": true,
+    "allowSyntheticDefaultImports": true
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules"]
